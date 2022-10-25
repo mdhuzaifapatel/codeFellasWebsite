@@ -410,6 +410,10 @@ a {
   width: 190px;
 }
 
+.menuMobilePopup .menuMobilePopupContainer .menuMobilePopupMiddle .mobileHeader .logo{
+  width: 152px;
+  margin: 7px;
+}
 .sidebar .logo {
   padding: 30px 0 0 0;
   text-align: center;
