@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>shortcodes Archives - Be Theme Blog</title>
+	<atom:link href="https://muffingroup.com/blog/category/shortcodes/feed/" rel="self" type="application/rss+xml" />
+	<link>https://muffingroup.com/blog</link>
+	<description>Where web designers come for inspiration</description>
+	<lastBuildDate>Wed, 13 Oct 2021 12:18:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+	<item>
+		<title>How To Use the WordPress do_shortcode Function Correctly</title>
+		<link>https://muffingroup.com/blog/wordpress-do_shortcode/</link>
+		
+		<dc:creator><![CDATA[Albert Ślusarczyk]]></dc:creator>
+		<pubDate>Thu, 27 Jun 2019 13:56:02 +0000</pubDate>
+				<category><![CDATA[shortcodes]]></category>
+		<guid isPermaLink="false">https://muffingroup.com/blog/?p=4609</guid>
+
+					<description><![CDATA[<p>Desc WordPress is loved by both professional and amateur webmasters because of the ease with which new functionality can be added with plugins and widgets. But there&#8217;s a catch: not all plugins and widgets are able to insert content anywhere you want on a site, and they are often constrained<span class="excerpt-hellip"> […]</span></p>
+<p>The post <a rel="nofollow" href="https://muffingroup.com/blog/wordpress-do_shortcode/">How To Use the WordPress do_shortcode Function Correctly</a> appeared first on <a rel="nofollow" href="https://muffingroup.com/blog">Be Theme Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Desc<br />
+WordPress is loved by both professional and amateur webmasters because of the ease with which new functionality can be added with plugins and widgets. But there&#8217;s a catch: not all plugins and widgets are able to insert content anywhere you want on a site, and they are often constrained to displaying custom content in pages, posts, or sidebars only.</p>
+<p>Fortunately, you can use shortcodes in order to use custom pieces of code outside of a page, post, or sidebar – such as in the header or footer of your site. In most cases, plugins are developed to be used within WordPress’ visual editor, and widgets usually add code to the sidebar. With shortcodes, you can embed content directly into any WordPress template file, which will be displayed exactly where you place it. This article will focus on the do_shortcode function and how to use it to add new functionality anywhere you want.</p>
+<h3>What does this function do?</h3>
+<p>no-repeat;center top;;</p>
+<p>auto</p>
+<p><img  title="" src="https://muffingroup.com/blog/wp-content/uploads/2019/06/shortcode1.jpg"  alt="shortcode1 How To Use the WordPress do_shortcode Function Correctly"  /></p>
+<p>Desc</p>
+<p>To understand what the WordPress do_shortcode function does, let&#8217;s look at what a shortcode is. Shortcodes are small lines of text that can be added to your site which represent larger sections of code that are processed upon page load. When used, they invoke various functions that have various results (e.g. embedding a video or an interactive map). You can either use shortcodes written by you or you can use a plugin that automates the process and adds the shortcodes on its own.</p>
+<p>no-repeat;center top;;</p>
+<p>auto</p>
+<p><img  title="" src="https://muffingroup.com/blog/wp-content/uploads/2019/06/shortcode2.jpg"  alt="shortcode2 How To Use the WordPress do_shortcode Function Correctly"  /></p>
+<p>Desc</p>
+<p>The main functionality that WordPress do_shortcode adds to your site is embedding content easier into a theme file, whether it&#8217;s in the header, footer, or somewhere within the post loop. Basically, you get to insert content on your blog in a dynamic manner. WordPress&#8217; do_shortcode function allows users to use shortcodes to personalize and improve their websites the way they want, by selecting which shortcode to appear where. It is important to mention that some WordPress plugins are used to generate shortcodes for different purposes, but you still need to implement these codes yourself. The only issue with WordPress is that you might not know where to place your shortcodes.</p>
+<p>Another caveat is that when using the do_shortcode function, WordPress has to look through all possible shortcodes with RegEx to find the one that is being invoked, making this method somewhat slower than crafting a new, custom PHP function for what you want to achieve. However, as long as you don&#8217;t go too wild with your shortcodes, the performance hit shouldn&#8217;t be too bad.</p>
+<h3>How can you use it?</h3>
+<p>Normally, shortcodes can only be used in the WordPress editor. For instance, if you’d like to place a WordPress do_shortcode in the header section of your theme, you’ll have to do so manually.</p>
+<p>Of course, you’ll have to be prepared to tweak some code by copying and pasting a line. The do_shortcode function can invoke any function you need to add to the website, as well as different features on different theme files, without the usual restrictions. The WordPress do_shortcode function looks something like this:</p>
+<p><pre class="mfn-code">PHP&lt;br /&gt;
+[/?php echo do_shortcode(&quot;[shortcode]&quot;); ?&amp;gt;&lt;br /&gt;
+</pre>
+.</p>
+<h3>When should you use it?</h3>
+<p>Don’t use the do_shortcode function if you only want to alter HTML markups. You should use it when you want to:</p>
+<ul>
+<li>Use shortcodes to load dynamic content of any type</li>
+<li>Insert the Google Ads tracking code in different parts of your site</li>
+<li>Insert a Google Map, contact form, or other widget content somewhere suitable</li>
+</ul>
+<p>The 3-step guide to using the do_shortcode function</p>
+<p>You can learn how to use the WordPress do_shortcode function very quickly. Follow these simple steps to use any shortcode on your site, using the header location as an example:</p>
+<h3>1 &#8211; choose the shortcode you want</h3>
+<p>As mentioned before, when you use the WordPress do_shortcode function you can invoke anything you want. You need to research the different shortcodes available to you with your theme, plugins, and widgets,and then choose the one that you’d like to add to your site. For example, the shortcode for a specific Contact Form 7 form might be <pre class="mfn-code">[contact-form-7 id=&quot;7&quot;]</pre>
+.</p>
+<h3>2 &#8211; find the header.php file</h3>
+<p>no-repeat;center top;;</p>
+<p>auto</p>
+<p><img  title="" src="https://muffingroup.com/blog/wp-content/uploads/2019/06/shordcode3.jpg"  alt="shordcode3 How To Use the WordPress do_shortcode Function Correctly"  /></p>
+<p>Desc</p>
+<p>Once you’ve found the exact do_shortcode function that you want to call, you need to find the header.php file in WordPress. The easiest way is to use WordPress&#8217; built-in theme file editor (Appearance &gt; Editor).</p>
+<h3>3 &#8211; add the shortcode in this file</h3>
+<p>no-repeat;center top;;</p>
+<p>auto</p>
+<p><img  title="" src="https://muffingroup.com/blog/wp-content/uploads/2019/06/shortcode4.jpg"  alt="shortcode4 How To Use the WordPress do_shortcode Function Correctly"  /></p>
+<p>Desc</p>
+<p>The theme you are using might alter where you find the header.php file or how it looks . Normally, the code in the header.php file contains multiple div sections. These sections are responsible for how your website looks. The do_shortcode function should be added within the div that is linked to the location where you want the function to appear. Here’s an example of using do_shortcode to add the Contact Form 7 on your site:</p>
+<pre class="mfn-code">&lt;!--?php echo do_shortcode(&quot;&amp;#91;contact-form-7 id=&quot;?&quot; title=&quot;My Contact Form&quot;&amp;#93;&quot;); ?--&gt;</pre>
+
+<p>no-repeat;center top;;</p>
+<p>auto</p>
+<p><img  title="" src="https://muffingroup.com/blog/wp-content/uploads/2019/06/shortcode5.jpg"  alt="shortcode5 How To Use the WordPress do_shortcode Function Correctly"  /></p>
+<p><img  title="" src="https://muffingroup.com/blog/wp-content/uploads/2019/06/shortcode6.jpg"  alt="shortcode6 How To Use the WordPress do_shortcode Function Correctly"  /></p>
+<p><img  title="" src="https://muffingroup.com/blog/wp-content/uploads/2019/06/shortcode7.jpg"  alt="shortcode7 How To Use the WordPress do_shortcode Function Correctly"  /></p>
+<p>Desc</p>
+<h3>Other tips you should know about</h3>
+<p>no-repeat;center top;;</p>
+<p>auto</p>
+<p><img  title="" src="https://muffingroup.com/blog/wp-content/uploads/2019/06/search-shortcode.jpg"  alt="search-shortcode How To Use the WordPress do_shortcode Function Correctly"  /></p>
+<p>Desc</p>
+<ul>
+<li>Don’t abuse shortcodes by over-using them. Shortcodes are difficult to fix when they get broken, so try to keep their number to a minimum. WordPress&#8217; do_shortcode is very convenient to use, but be careful not to overwhelm your website. Some themes have more than 200+ shortcodes, and that’s not always the ideal situation.</li>
+<li>Future-proof the shortcodes when you add them. That is, make sure that the shortcodes you add won’t become obsolete or broken in the future. Document which ones have been added so that you can keep track of them and double-check they still work when your theme or plugins are updated.</li>
+<li>Learn how to search for shortcodes within your website. If you don’t know how to search for do_shortcode functions, it will be ten times more difficult to modify them if they are broken. The easiest way is to navigate to your theme’s folder in /wp-content/themes/your-theme-name/ and start your search from there.</li>
+</ul>
+<h3>Final thoughts</h3>
+<p>Once you understand the usefulness of the WordPress do_shortcode function, it will be difficult to stay away from using it.This short tutorial should have answered all of your questions regarding how to use WordPress shortcodes in any section of your site, and how to keep them working despite changes to your theme, plugins, or the core WordPress codebase.</p>
+<p>no-repeat;center top;;</p>
+<p>auto</p>
+<p>The post <a rel="nofollow" href="https://muffingroup.com/blog/wordpress-do_shortcode/">How To Use the WordPress do_shortcode Function Correctly</a> appeared first on <a rel="nofollow" href="https://muffingroup.com/blog">Be Theme Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>5 Extra Useful Shortcodes You Should Know About</title>
+		<link>https://muffingroup.com/blog/5-extra-useful-shortcodes-you-should-know-about/</link>
+		
+		<dc:creator><![CDATA[Mike Sanders]]></dc:creator>
+		<pubDate>Mon, 18 Apr 2016 12:39:48 +0000</pubDate>
+				<category><![CDATA[shortcodes]]></category>
+		<guid isPermaLink="false">http://muffingroup.com/blog/?p=2542</guid>
+
+					<description><![CDATA[<p>A shortcode is a feature that comes in handy when you need to include special functionality on specific pages of your website. A shortcode is simply a short piece of code that is designed to cut down on having to use repetitive strings of HTML to add identical functionality page<span class="excerpt-hellip"> […]</span></p>
+<p>The post <a rel="nofollow" href="https://muffingroup.com/blog/5-extra-useful-shortcodes-you-should-know-about/">5 Extra Useful Shortcodes You Should Know About</a> appeared first on <a rel="nofollow" href="https://muffingroup.com/blog">Be Theme Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>A shortcode is a feature that comes in handy when you need to include special functionality on specific pages of your website.</p>
+<p>A shortcode is simply a short piece of code that is designed to cut down on having to use repetitive strings of HTML to add identical functionality page after page, or website after website. It is a time-saving feature that can stored in a library to be used again and again, as the need arises.</p>
+<p>You can create your own shortcodes, and some web designers do; but if your coding skills are somewhere between nil and minimal, there’s a better way. Simply use a WordPress theme like Be Theme that features a library of shortcodes and the means to implement them. The shortcodes are always there when you need them.</p>
+<p>&nbsp;</p>
+<h3><strong>Why are Shortcodes Useful?</strong></h3>
+<p><a href="http://themes.muffingroup.com/be/splash/"><img  title="" loading="lazy" class="alignnone size-full wp-image-2543" src="http://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes1.jpg"  alt="shortcodes1 5 Extra Useful Shortcodes You Should Know About"  width="950" height="364" srcset="https://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes1.jpg 950w, https://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes1-700x268.jpg 700w, https://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes1-260x100.jpg 260w, https://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes1-50x19.jpg 50w, https://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes1-150x57.jpg 150w" sizes="(max-width: 950px) 100vw, 950px" /></a></p>
+<p>Their primary purpose is to access useful functionalities that enable you to incorporate specific functions or content onto your website pages.</p>
+<ul>
+<li>When shortcodes are available, you don’t need to create your own code.</li>
+<li>Since you don’t need to create code, you don’t have to worry about organizing and storing the code for later use. Be Theme takes care of that.</li>
+<li>Shortcodes make modifying a layout, or multiple layouts, a quick and easy task.</li>
+<li>In the case of Be Theme, shortcodes let you take a design element you see in a demo, and insert it anywhere on a web page.</li>
+<li>Shortcodes make your life as a web designer easier; they are time savers and productivity boosters.</li>
+</ul>
+<p><a href="http://themes.muffingroup.com/be/splash/">Be Theme</a> has the features and functionality to accomplish almost anything you want done when building a website, but if it had <em>every single</em> feature you might need, it would tend to become a cumbersome tool to work with.</p>
+<p>Shortcodes keep that from happening.</p>
+<p>The five useful shortcodes to be discussed here cover a lot of territory. Be Theme’s shortcodes library has more than <em>40 times</em> that many, ranging from typography and infographics, to content blocks, elements, and loops.  <em>Be Theme has you covered</em>.</p>
+<p>&nbsp;</p>
+<h3><strong>5 Examples of Useful Shortcodes</strong></h3>
+<p><a href="http://themes.muffingroup.com/be/splash/"><img  title="" loading="lazy" class="alignnone size-full wp-image-2544" src="http://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes2.jpg"  alt="shortcodes2 5 Extra Useful Shortcodes You Should Know About"  width="950" height="506" srcset="https://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes2.jpg 950w, https://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes2-700x373.jpg 700w, https://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes2-260x138.jpg 260w, https://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes2-50x27.jpg 50w, https://muffingroup.com/blog/wp-content/uploads/2016/04/shortcodes2-141x75.jpg 141w" sizes="(max-width: 950px) 100vw, 950px" /></a></p>
+<p>The five examples shown have different uses. What is important however is how to use them. Instead writing code, you simply <em>insert the appropriate attributes</em> into the shortcode. The shortcode will do the work; you only have to specify what you want done.</p>
+<ul>
+<li>The<strong> Portfolio Slider</strong> shortcode has five attributes that relate to how you want to present your portfolio. Enter the number of portfolio items, the category, the IDs of various categories (if showing more than one), order by date, menu, or title, and ascending or descending order.</li>
+<li>The <strong>Blog Slider</strong> shortcode uses the same types of attributes as the portfolio slider. The use is somewhat different, in that the items presented are typically content from recent posts, or categories of posts.</li>
+<li><strong>Button shortcodes</strong> can be used to create various button styles. You can use a button to link to another page, link to a section on the same page, or for downloading.</li>
+<li><strong>Column shortcodes</strong> are used to build pages without using a page builder. They define the 6 column types. You simply select the type and insert your content.</li>
+<li><strong>The Map shortcode</strong> enables you to add a map of any size on any location on your page. Its attributes are latitude, longitude, height (in pixels), and zoom.</li>
+</ul>
+<p>&nbsp;</p>
+<h3><strong>Be Theme Makes It Easy</strong></h3>
+<p><a href="http://themes.muffingroup.com/betheme/shortcodes/typography/">The Shortcode Generator and library</a> is but one of Be Theme’s many features. This, the biggest WordPress theme on the market, can boast of <strong>40 powerful core features</strong>, including its collection of <strong>190+ professionally created, fully customizable, pre-built websites.</strong></p>
+<p>Be is fully responsive and multilingual, RTL, and retina ready. Other features include a one-click demo import, the premium page builder, layout configuration features and options, and a support team that is second to none. Be is always kept up to date, and once you make your purchase you will receive lifetime updates.</p>
+<p>Be Theme, like the shortcodes described here, makes life easier for you.</p>
+<p>Further reading: <a href="https://darshansaroya.com/how-to-add-extra-class-in-wordpress-menu/" target="_blank" rel="noopener noreferrer">How to Add Extra class in WordPress Menu</a></p>
+<p>The post <a rel="nofollow" href="https://muffingroup.com/blog/5-extra-useful-shortcodes-you-should-know-about/">5 Extra Useful Shortcodes You Should Know About</a> appeared first on <a rel="nofollow" href="https://muffingroup.com/blog">Be Theme Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 37/57 objects using disk
+Page Caching using disk (Page is feed) 
+Lazy Loading (feed)
+Minified using disk
+Database Caching 7/18 queries in 0.003 seconds using disk
+
+Served from: muffingroup.com @ 2022-04-11 12:07:12 by W3 Total Cache
+-->
