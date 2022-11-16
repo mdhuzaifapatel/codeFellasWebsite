@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="signup-form">
-                    <form action="/index.html" method="POST" class="register-form" id="form">
+                    <form action="" onsubmit="myFunction()" method="POST" class="register-form" id="form">
                         <!-- <div class="form-row"> -->
                             <label class="heading">Register now!</label>
 
@@ -112,7 +112,18 @@
                             </div>
                         </div> -->
                         <div class="form-submit">
-                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                            <!-- <input type="submit" value="Submit" class="submit" id="submit" name="submit" /> -->
+                            <button type="submit" value="Submit" class="" id="submit" name="submit">
+                                <span>Submit</span>
+                                <svg aria-hidden="true" focusable="false" class="loader loading" viewBox="0 0 38 38">
+                                  <g transform="translate(2 2)" stroke="currentColor" stroke-width="4" fill-rule="evenodd">
+                                    <circle class="st0" stroke-opacity=".5" cx="17" cy="17" r="16.5"></circle>
+                                    <path class="st1" d="M33.5 17C33.5 7.9 26.1.5 17 .5" transform="rotate(249.767 17 17)">
+                                      <animateTransform accumulate="none" additive="replace" attributeName="transform" calcMode="linear" dur="1s" from="0 17 17" repeatCount="indefinite" restart="always" to="360 17 17" type="rotate"></animateTransform>
+                                    </path>
+                                  </g>
+                                </svg>
+                              </button>
                             <!-- <input type="submit" value="Reset" class="submit" id="reset" name="reset" /> -->
                         </div>
                     </form>
@@ -124,28 +135,35 @@
 
     <!-- JS -->
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzR9xzbRYpuYLHRkq94eD84QHSsR7bNiAZD8IwylCMIWMTqOZB-XZzI0mAS_UEYjr9y/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzR9xzbRYpuYLHRkq94eD84QHSsR7bNiAZD8IwylCMIWMTqOZB-XZzI0mAS_UEYjr9y/exec'
     const form = document.querySelector('#form')
-    const btn = document.querySelector('#submit')
+    // const btn = document.querySelector('#submit')
 
 
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      btn.disabled = true
-      btn.innerHTML = "Loading..."
+    // form.addEventListener('submit', e => {
+    //   e.preventDefault()
+    //   btn.disabled = true
+    //   console.log(form)
+    //   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    // })
+    setTimeout(() => { myFunction() }, 5000);
 
-      console.log(form)
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => { 
-              btn.disabled = false
-      btn.innerHTML = "Submit"
-            alert('Success!', response) })
-        .catch(error => {
-                     btn.disabled = false
-      btn.innerHTML = "Submit"
-            alert('Error!', error.message)})
-    })
-     </script>
+    form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const button = form.querySelector('button');
+    button.classList.add('loading');
+    // const myTimeout = setTimeout(myFunction, 5000);
+    button.disabled = true;
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+});
+    
+    function myFunction() {
+        window.location.href="/index.html"
+    }
+    
+      
+    </script>
+
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/nouislider/nouislider.min.js"></script>
     <script src="vendor/wnumb/wNumb.js"></script>
