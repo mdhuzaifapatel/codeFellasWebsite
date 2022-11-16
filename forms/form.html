@@ -136,7 +136,7 @@
     <!-- JS -->
     <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzR9xzbRYpuYLHRkq94eD84QHSsR7bNiAZD8IwylCMIWMTqOZB-XZzI0mAS_UEYjr9y/exec'
-    const form = document.querySelector('#form')
+    // const form = document.querySelector('#form')
     // const btn = document.querySelector('#submit')
 
 
@@ -146,21 +146,21 @@
     //   console.log(form)
     //   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
     // })
-    setTimeout(() => { myFunction() }, 5000);
+    
+    function myFunction() {
+        window.location.href="/index.html"
+    }
+
+    const form = document.getElementById('form');
 
     form.addEventListener('submit', function (event) {
     event.preventDefault();
     const button = form.querySelector('button');
     button.classList.add('loading');
-    // const myTimeout = setTimeout(myFunction, 5000);
     button.disabled = true;
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
 });
-    
-    function myFunction() {
-        window.location.href="/index.html"
-    }
-    
+
       
     </script>
 
