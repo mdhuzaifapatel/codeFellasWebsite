@@ -1,86 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Register | Code Fellas</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-
-</head>
-<body>
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="main">
+      <div class="cont">
+        <div class="signup-content">
+          <div class="signup-img">
+            <img src="images/event1.png" alt="" />
+            <div class="signup-img-content">
+              <h2></h2>
+              <p></p>
+            </div>
+          </div>
 
-        <div class="container">
-            <div class="signup-content">
-                <div class="signup-img">
-                    <img src="images/form-img.jpg" alt="">
-                    <div class="signup-img-content">
-                        <h2>Register now </h2>
-                        <p>while seats are available !</p>
-                    </div>
+          <div class="signup-form">
+            <form
+              action=""
+              onsubmit="myFunction()"
+              method="POST"
+              class="register-form"
+              id="form"
+            >
+              <!-- <div class="form-row"> -->
+              <label class="heading">Register now!</label>
+
+              <div class="form-group">
+                <div class="form-input">
+                  <label for="first_name" class="required">Full name</label>
+                  <input
+                    type="text"
+                    name="full_name"
+                    id="first_name"
+                    required
+                  />
                 </div>
-                <div class="signup-form">
-                    <form action="" onsubmit="myFunction()" method="POST" class="register-form" id="form">
-                        <!-- <div class="form-row"> -->
-                            <label class="heading">Register now!</label>
 
-                            <div class="form-group">
+                <div class="form-input">
+                  <label for="usn" class="required">USN</label>
+                  <input type="text" name="usn" id="usn" required />
+                </div>
 
-                                <div class="form-input">
-                                    <label for="first_name" class="required">Full name</label>
-                                    <input type="text" name="full_name" id="first_name" required />
-                                </div>
-
-                                <div class="form-input">
-                                    <label for="usn" class="required">USN</label>
-                                    <input type="text" name="usn" id="usn" required />
-                                </div>
-
-                                <!-- <div class="form-input">
+                <!-- <div class="form-input">
                                     <label for="company" class="required">Email</label>
                                     <input type="text" name="company" id="company" />
                                 </div> -->
 
-                                <div class="form-input">
-                                    <label for="email" class="required">Email</label>
-                                    <input type="email" name="email" id="email" required />
-                                </div>
+                <div class="form-input">
+                  <label for="email" class="required">Email</label>
+                  <input type="email" name="email" id="email" required />
+                </div>
 
-                                
-                                <div class="form-input">
-                                    <label for="branch" class="form-label required">Branch</label>
-                                    <select class="form-select form-select-lg mb-3" name="branch" id="branch" required>
-                                        <option value="">Select your branch</option>
-                                        <option value="CSE">First year</option>
-                                        <option value="CSE">CSE</option>
-                                        <option value="ECE">ECE</option>
-                                        <option value="EEE">EEE</option>
-                                        <option value="Civil">Civil</option>
-                                        <option value="Mechanical">Mechanical</option>
-                                        <option value="Bio Medical">Bio Medical</option>
-                                        <option value="Chemical">Chemical</option>
-                                    </select>
-                                
-                                </div> 
+                <div class="form-input">
+                  <label for="branch" class="form-label required">Branch</label>
+                  <select
+                    class="form-select form-select-lg mb-3"
+                    name="branch"
+                    id="branch"
+                    required
+                  >
+                    <option value="">Select your branch</option>
+                    <option value="CSE">First year</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Bio Medical">Bio Medical</option>
+                    <option value="Chemical">Chemical</option>
+                  </select>
+                </div>
 
-                                <div class="form-input">
-                                    <label for="phone_number" class="required">Phone number</label>
-                                    <input type="number" name="phone_number" id="phone_number" required />
-                                </div>
-                            </div>
-                            
-                            <!-- <div class="form-group">
+                <div class="form-input">
+                  <label for="phone_number" class="required"
+                    >Phone number</label
+                  >
+                  <input
+                    type="number"
+                    name="phone_number"
+                    id="phone_number"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- <div class="form-group">
                                 <div class="form-select">
                                     <div class="label-flex">
                                         <label for="meal_preference">meal preference</label>
@@ -96,7 +123,7 @@
                                 </div>
                                 
                             </div>  -->
-                        <!-- </div>
+              <!-- </div>
                          <div class="donate-us">
                             <label>Donate us</label>
                             <div class="price_slider ui-slider ui-slider-horizontal">
@@ -105,10 +132,16 @@
                             </div>
                         </div> -->
 
-                        <div class="form-submit">
-                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+              <div class="form-submit">
+                <input
+                  type="submit"
+                  value="Submit"
+                  class="submit"
+                  id="submit"
+                  name="submit"
+                />
 
-                            <!-- <button type="submit" value="Submit" class="" id="submit" name="submit">
+                <!-- <button type="submit" value="Submit" class="" id="submit" name="submit">
                                 <span>Submit</span>
                                 <svg aria-hidden="true" focusable="false" class="loader loading" viewBox="0 0 38 38">
                                   <g transform="translate(2 2)" stroke="currentColor" stroke-width="4" fill-rule="evenodd">
@@ -119,43 +152,39 @@
                                   </g>
                                 </svg>
                               </button> -->
-                            <!-- <input type="submit" value="Reset" class="submit" id="reset" name="reset" /> -->
-                        </div>
-                    </form>
-                </div>
-            </div>
+                <!-- <input type="submit" value="Reset" class="submit" id="reset" name="reset" /> -->
+              </div>
+            </form>
+          </div>
         </div>
-
+      </div>
     </div>
 
     <!-- JS -->
     <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzR9xzbRYpuYLHRkq94eD84QHSsR7bNiAZD8IwylCMIWMTqOZB-XZzI0mAS_UEYjr9y/exec'
-    // const form = document.querySelector('#form')
-    // const btn = document.querySelector('#submit')
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzR9xzbRYpuYLHRkq94eD84QHSsR7bNiAZD8IwylCMIWMTqOZB-XZzI0mAS_UEYjr9y/exec";
+      // const form = document.querySelector('#form')
+      // const btn = document.querySelector('#submit')
 
+      // form.addEventListener('submit', e => {
+      //   e.preventDefault()
+      //   btn.disabled = true
+      //   console.log(form)
+      //   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      // })
 
-    // form.addEventListener('submit', e => {
-    //   e.preventDefault()
-    //   btn.disabled = true
-    //   console.log(form)
-    //   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    // })
-    
-    function myFunction() {
-        window.location.href="./thank-you.html"
-    }
+      function myFunction() {
+        window.location.href = "./thank-you.html";
+      }
 
-    const form = document.getElementById('form');
+      const form = document.getElementById("form");
 
-    form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const button = form.querySelector('#submit');
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-});
-
-      
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const button = form.querySelector("#submit");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) });
+      });
     </script>
-
-</body>
+  </body>
 </html>
