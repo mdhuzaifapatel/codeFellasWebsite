@@ -2,11 +2,10 @@
 @charset "utf-8";
 
 .fa {
-  margin: 3px;
-  padding: 3px;
-  font-size: 15px;
-  text-align: center;
-  text-decoration: none;
+    margin: 4px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 15%;
 }
 
 .fa:hover {
@@ -14,14 +13,12 @@
 }
 
 .fa-linkedin {
-  background-color: #ffd678;
-  color: #000000;
+  /* background-color: #ffd678; */
 }
 
 
 .fa-instagram {
-  background-color: #ffd678;
-  color: #000000;
+  /* background-color: #ffd678; */
 }
 
 
@@ -2756,7 +2753,7 @@ a {
   }
 
   .name p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .contactSection {
@@ -3213,6 +3210,10 @@ a {
 
   .contactSection .copyright {
     padding: 40px 0 0 0;
+  }
+
+  .name p {
+    font-size: 14px;
   }
 }
 
@@ -4096,8 +4097,7 @@ a {
 
   .fa {
     margin: 0px 2px 50px -1px;
-    display: flex;
-    flex-direction: row;
+    padding: 1.5px;
     font-size: 5px;
     text-align: center;
 
