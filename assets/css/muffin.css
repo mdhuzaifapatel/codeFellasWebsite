@@ -1,6 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Istok+Web:700|Playfair+Display|Poppins:300,500&amp;subset=latin-ext');
 @charset "utf-8";
 
+.fa {
+  margin: 3px;
+  padding: 3px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background-color: #ffd678;
+  color: #000000;
+}
+
+
+.fa-instagram {
+  background-color: #ffd678;
+  color: #000000;
+}
+
+
 .fIstok {
   font-family: 'Istok Web', sans-serif;
   font-weight: 700;
@@ -411,10 +435,11 @@ a {
   width: 190px;
 }
 
-.menuMobilePopup .menuMobilePopupContainer .menuMobilePopupMiddle .mobileHeader .logo{
+.menuMobilePopup .menuMobilePopupContainer .menuMobilePopupMiddle .mobileHeader .logo {
   width: 152px;
   margin: 7px;
 }
+
 .sidebar .logo {
   padding: 30px 0 0 0;
   text-align: center;
@@ -1656,6 +1681,7 @@ a {
   padding: 30px 0 0 0;
   font-size: 20px;
 }
+
 .name p {
   font-size: 15px;
   color: #ffd678;
@@ -2828,7 +2854,7 @@ a {
     padding: 0 10px;
   }
 
-  .name p{
+  .name p {
     font-size: 11px;
   }
 
@@ -4066,6 +4092,15 @@ a {
 
   .name p {
     font-size: 11px;
+  }
+
+  .fa {
+    margin: 0px 2px 50px -1px;
+    display: flex;
+    flex-direction: row;
+    font-size: 5px;
+    text-align: center;
+
   }
 
   .contactSection {
