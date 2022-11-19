@@ -12,6 +12,10 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
 </head>
 <body>
 
@@ -32,27 +36,50 @@
                             <label class="heading">Register now!</label>
 
                             <div class="form-group">
+
                                 <div class="form-input">
                                     <label for="first_name" class="required">Full name</label>
                                     <input type="text" name="full_name" id="first_name" required />
                                 </div>
+
                                 <div class="form-input">
                                     <label for="usn" class="required">USN</label>
                                     <input type="text" name="usn" id="usn" required />
                                 </div>
+
                                 <!-- <div class="form-input">
                                     <label for="company" class="required">Email</label>
                                     <input type="text" name="company" id="company" />
                                 </div> -->
+
                                 <div class="form-input">
                                     <label for="email" class="required">Email</label>
                                     <input type="email" name="email" id="email" required />
                                 </div>
+
+                                
+                                <div class="form-input">
+                                    <label for="branch" class="form-label required">Branch</label>
+                                    <select class="form-select form-select-lg mb-3" name="branch" id="branch" required>
+                                        <option value="">Select your branch</option>
+                                        <option value="CSE">First year</option>
+                                        <option value="CSE">CSE</option>
+                                        <option value="ECE">ECE</option>
+                                        <option value="EEE">EEE</option>
+                                        <option value="Civil">Civil</option>
+                                        <option value="Mechanical">Mechanical</option>
+                                        <option value="Bio Medical">Bio Medical</option>
+                                        <option value="Chemical">Chemical</option>
+                                    </select>
+                                
+                                </div> 
+
                                 <div class="form-input">
                                     <label for="phone_number" class="required">Phone number</label>
                                     <input type="number" name="phone_number" id="phone_number" required />
                                 </div>
                             </div>
+                            
                             <!-- <div class="form-group">
                                 <div class="form-select">
                                     <div class="label-flex">
@@ -67,52 +94,20 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-radio">
-                                    <div class="label-flex">
-                                        <label for="payment">Payment Mode</label>
-                                        <a href="#" class="form-link">Payment Detail</a>
-                                    </div>
-                                    <div class="form-radio-group">            
-                                        <div class="form-radio-item">
-                                            <input type="radio" name="payment" id="cash" checked>
-                                            <label for="cash">Cash</label>
-                                            <span class="check"></span>
-                                        </div>
-                                        <div class="form-radio-item">
-                                            <input type="radio" name="payment" id="cheque">
-                                            <label for="cheque">Cheque</label>
-                                            <span class="check"></span>
-                                        </div>
-                                        <div class="form-radio-item">
-                                            <input type="radio" name="payment" id="demand">
-                                            <label for="demand">Demand Draf</label>
-                                            <span class="check"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-input">
-                                    <label for="chequeno">DD / Cheque No.</label>
-                                    <input type="text" name="chequeno" id="chequeno" />
-                                </div>
-                                <div class="form-input">
-                                    <label for="blank_name">Drawn on ( Bank Name)</label>
-                                    <input type="text" name="blank_name" id="blank_name" />
-                                </div>
-                                <div class="form-input">
-                                    <label for="payable">Payable at</label>
-                                    <input type="text" name="payable" id="payable" />
-                                </div>
-                            </div> -->
-                        <!-- </div> -->
-                        <!-- <div class="donate-us">
+                                
+                            </div>  -->
+                        <!-- </div>
+                         <div class="donate-us">
                             <label>Donate us</label>
                             <div class="price_slider ui-slider ui-slider-horizontal">
                                 <div id="slider-margin"></div>
                                 <span class="donate-value" id="value-lower"></span>
                             </div>
                         </div> -->
+
                         <div class="form-submit">
                             <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+
                             <!-- <button type="submit" value="Submit" class="" id="submit" name="submit">
                                 <span>Submit</span>
                                 <svg aria-hidden="true" focusable="false" class="loader loading" viewBox="0 0 38 38">
@@ -155,20 +150,12 @@
 
     form.addEventListener('submit', function (event) {
     event.preventDefault();
-    const button = form.querySelector('button');
-    button.classList.add('loading');
-    button.disabled = true;
+    const button = form.querySelector('#submit');
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
 });
 
       
     </script>
 
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/nouislider/nouislider.min.js"></script>
-    <script src="vendor/wnumb/wNumb.js"></script>
-    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
