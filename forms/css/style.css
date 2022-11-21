@@ -75,11 +75,12 @@ input:-webkit-autofill {
   background-color: transparent !important;
 }
 
+
 img {
   max-width: 100%;
-  height: auto;
-  margin-left: 47px;
-  margin-top: 48px;
+  height: 100%;
+  padding: 5px;
+  
 }
 
 figure {
@@ -111,12 +112,12 @@ h2 {
 body {
   font-size: 14px;
   line-height: 1.8;
-  color: #222;
+  color: rgb(255, 255, 255);
   font-weight: 500;
   font-family: 'Poppins';
   margin: 0px;
-  background: #282828;
   padding: 50px 0;
+  background: linear-gradient(#28374f,#192538);
 }
 
 .main {
@@ -126,13 +127,16 @@ body {
 .cont {
   width: 1400px;
   margin: 0 auto;
-  background: #fff;
+  /* background: linear-gradient(blue,red); */
 }
 
 .signup-img {
   position: relative;
-  width: 385px;
-  margin-bottom: -8px;
+width: 470px;
+margin-bottom: 71px;
+background-color: #36c670;
+margin-right: -26px;
+margin-top: -27px;
 }
 
 .signup-form {
@@ -155,7 +159,7 @@ body {
 }
 
 .register-form {
-  padding: 57px 15px 90px 80px;
+  padding: 0px 15px 90px 80px;
   /* margin-bottom: -10px; */
 }
 
@@ -198,7 +202,7 @@ label.required:after {
 input {
   box-sizing: border-box;
   border: 1px solid #ebebeb;
-  padding: 14px 20px;
+  padding: 10px 20px;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -474,16 +478,17 @@ li.init:after {
 
 .form-submit {
   text-align: right;
-  
+  margin-top: 30px;
+  /* margin-left: 460px; */
 }
 
 .submit {
-  width: 150px;
+  width: 200px;
   height: 50px;
   display: inline-block;
   font-family: 'Poppins';
-  /* font-weight: bold; */
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 16px;
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -508,13 +513,13 @@ li.init:after {
 }
 
 #submit {
-  background: #329e5e;
+  background: #36c670;
   color: #fff;
-  margin-right: 25px;
+  margin-right: -2px;
 }
 
 #submit:hover {
-  background-color: #267747;
+  background-color: #3aa766;
 }
 
 .form-input {
@@ -556,11 +561,15 @@ input.error {
 }
 
 .heading {
-  margin-top: -10px;
-  margin-bottom: 15px;
+  font-family: Poppins;
+  text-transform: uppercase;
+  font-weight: bold;
   font-size: 26px
 }
-
+.h{
+  margin-top: 5px;
+  margin-bottom: 45px;
+}
 button {
   color: #fff;
   border-radius: 5px;
