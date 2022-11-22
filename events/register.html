@@ -47,15 +47,12 @@
             >
               <!-- <div class="form-row"> -->
               <div class="">
-
                 <h2 class="heading">Register now!</h2>
                 <p class="h">while the seats are available!</p>
               </div>
               <div class="form-group">
                 <div class="form-input">
-                  <label for="first_name" class="text-white "
-                    >Full name</label
-                  >
+                  <label for="first_name" class="text-white">Full name</label>
                   <input
                     type="text"
                     name="full_name"
@@ -76,7 +73,7 @@
 
                 <div class="form-input">
                   <label for="email" class="text-white">Email </label>
-                  <input type="email" name="email" id="email"  required />
+                  <input type="email" name="email" id="email" required />
                 </div>
 
                 <div class="form-input">
@@ -87,8 +84,8 @@
                     class="form-select form-select-lg mb-3"
                     name="branch"
                     id="branch"
-                    onfocus = "changeFontStyle (this);"
-                    required  
+                    onfocus="changeFontStyle (this);"
+                    required
                   >
                     <option value="">Select your branch</option>
                     <option value="CSE">First year</option>
@@ -103,7 +100,7 @@
                 </div>
 
                 <div class="form-input">
-                  <label for="phone_number" class="text-white "
+                  <label for="phone_number" class="text-white"
                     >Phone number</label
                   >
                   <input
@@ -182,12 +179,9 @@
         fetch(scriptURL, { method: "POST", body: new FormData(form) });
       });
 
-      
-        var changeFontStyle = function (font) {
-            document.getElementById(
-                "branch").style.fontSize = "medium";
-        }
-    
+      var changeFontStyle = function (font) {
+        document.getElementById("branch").style.fontSize = "medium";
+      };
     </script>
   </body>
 </html>
